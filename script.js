@@ -131,7 +131,7 @@ const TIMELINE_DATA = [
     // 15
     {
         date: "Fev 2026",
-        placeholder: "Next Step",
+        photo: "fotos/15.JPEG",
         title: "1 Mês",
         text: "Nosso primeiro mês juntos. Esse é só o primeiro capítulo de muitos que estão por vir."
     },
