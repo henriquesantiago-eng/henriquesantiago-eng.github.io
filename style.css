@@ -370,6 +370,26 @@ body {
     transform: translateX(-50%);
 }
 
+/* Year marker between timeline scenes */
+.tl-year-marker {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tl-year-text {
+    font-family: var(--ff-display);
+    font-size: clamp(3rem, 12vw, 7rem);
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.15;
+    letter-spacing: 8px;
+    text-shadow: 0 0 60px rgba(142, 170, 220, 0.1);
+    user-select: none;
+}
+
 /* Each moment = one full-screen scene */
 .tl-scene {
     position: relative;
@@ -381,19 +401,9 @@ body {
     padding: 60px 24px;
 }
 
-/* The dot on the center line */
+/* The dot on the center line (hidden) */
 .tl-scene-dot {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid var(--gold-dim);
-    background: var(--bg);
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: all 0.5s var(--ease-out);
+    display: none;
 }
 
 .tl-scene-dot::after {

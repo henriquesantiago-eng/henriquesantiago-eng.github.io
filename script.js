@@ -40,49 +40,49 @@ const TIMELINE_DATA = [
     // 2
     {
         date: "Nov 2023",
-        photo: "fotos/02.jpg",
+        photo: "fotos/02.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 3
     {
         date: "Mar 2024",
-        photo: "fotos/03.jpg",
+        photo: "fotos/03.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 4
     {
         date: "Abr 2024",
-        photo: "fotos/04.jpg",
+        photo: "fotos/04.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 5
     {
         date: "Abr 2024",
-        photo: "fotos/05.jpg",
+        photo: "fotos/05.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 6
     {
         date: "Jul 2024",
-        photo: "fotos/06.jpg",
+        photo: "fotos/06.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 7
     {
         date: "Jul 2024",
-        photo: "fotos/07.jpg",
+        photo: "fotos/07.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 8
     {
         date: "Jan 2025",
-        photo: "fotos/08.jpg",
+        photo: "fotos/08.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
@@ -162,12 +162,31 @@ setInterval(tickCounter, 1000);
 
 
 // ============================================================
-// ❸ GERAR TIMELINE — Cenas imersivas full-screen
+// ❸ GERAR TIMELINE — Cenas imersivas full-screen + marcadores de ano
 // ============================================================
 const tlTrack = document.getElementById('tlTrack');
 const totalItems = TIMELINE_DATA.length;
 
+// Extrai o ano de uma string como "Out 2023" → "2023"
+function extractYear(dateStr) {
+    const match = dateStr.match(/\d{4}/);
+    return match ? match[0] : '';
+}
+
+let lastYear = '';
+
 TIMELINE_DATA.forEach((item, i) => {
+    const year = extractYear(item.date);
+
+    // Se o ano mudou, insere um marcador de ano
+    if (year && year !== lastYear) {
+        const marker = document.createElement('div');
+        marker.classList.add('tl-year-marker');
+        marker.innerHTML = `<span class="tl-year-text">${year}</span>`;
+        tlTrack.appendChild(marker);
+        lastYear = year;
+    }
+
     const scene = document.createElement('div');
     scene.classList.add('tl-scene');
     scene.innerHTML = `
