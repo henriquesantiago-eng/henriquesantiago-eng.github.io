@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nossa História ❤️</title>
+    <meta name="description" content="Uma história contada com amor.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Film grain overlay -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- ===== MUSIC PLAYER ===== -->
+    <button class="music-toggle" id="musicToggle" aria-label="Tocar/Pausar música">
+        <span class="music-icon" id="musicIcon">♫</span>
+        <span class="music-bars" id="musicBars">
+            <i></i><i></i><i></i><i></i>
+        </span>
+    </button>
+    <!-- Player de áudio gerenciado pelo JS (playlist) -->
+    <audio id="bgMusic" preload="auto"></audio>
+
+    <!-- ===== SEÇÃO 1: HERO — Contador ===== -->
+    <section class="scene scene-hero" id="sceneHero">
+        <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+        <div class="hero-body">
+            <p class="hero-intro reveal">Faz exatamente</p>
+            <div class="counter reveal reveal-delay-1">
+                <div class="counter-unit">
+                    <span class="counter-num" id="cDays">00</span>
+                    <span class="counter-lbl">dias</span>
+                </div>
+                <span class="counter-dot">·</span>
+                <div class="counter-unit">
+                    <span class="counter-num" id="cHours">00</span>
+                    <span class="counter-lbl">horas</span>
+                </div>
+                <span class="counter-dot">·</span>
+                <div class="counter-unit">
+                    <span class="counter-num" id="cMins">00</span>
+                    <span class="counter-lbl">min</span>
+                </div>
+                <span class="counter-dot">·</span>
+                <div class="counter-unit">
+                    <span class="counter-num" id="cSecs">00</span>
+                    <span class="counter-lbl">seg</span>
+                </div>
+            </div>
+            <p class="hero-closing reveal reveal-delay-2">que a nossa história começou…</p>
+            <div class="scroll-cue reveal reveal-delay-3">
+                <span>role para baixo</span>
+                <div class="scroll-cue-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO 2: TRANSIÇÃO ===== -->
+    <section class="scene scene-transition" id="sceneTransition">
+        <p class="transition-text reveal">O que é estranho, porque…</p>
+    </section>
+
+    <!-- ===== SEÇÃO 3: TIMELINE VERTICAL ===== -->
+    <section class="timeline" id="timeline">
+        <!-- A linha central e os items são gerados pelo JS -->
+        <div class="tl-track" id="tlTrack"></div>
+    </section>
+
+    <!-- ===== SEÇÃO 4: CARTA / ENVELOPE ===== -->
+    <section class="scene scene-letter" id="sceneLetter">
+        <div class="letter-paper" id="letterPaper">
+            <h2 class="letter-greeting">Para você, meu amor</h2>
+            <div class="letter-body">
+                <p>
+                    Cada segundo ao seu lado vale mais do que todas as estrelas do céu.
+                    Esse é só o primeiro mês de muitos que estão por vir.
+                </p>
+                <p>
+                    Obrigado por ser quem você é e por fazer os meus dias tão especiais.
+                    Eu te amo mais do que qualquer contador poderia medir.
+                </p>
+            </div>
+            <p class="letter-signature">Com todo meu amor ❤️</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>feito com ❤️ para a Lu</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
