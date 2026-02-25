@@ -384,7 +384,7 @@ body {
     font-size: clamp(3rem, 12vw, 7rem);
     font-weight: 700;
     color: var(--gold);
-    opacity: 0.15;
+    opacity: 0.35;
     letter-spacing: 8px;
     text-shadow: 0 0 60px rgba(142, 170, 220, 0.1);
     user-select: none;
@@ -586,8 +586,10 @@ body {
 .scene-drift {
     min-height: 40vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
     padding: 40px 24px 60px;
 }
 
