@@ -132,7 +132,7 @@ const TIMELINE_DATA = [
     {
         date: "Fev 2026",
         photo: "fotos/15.jpg",
-        title: "1 Mês ❤️",
+        title: "1 Mês",
         text: "E esse é só o primeiro capítulo de muitos por vir."
     },
 ];
