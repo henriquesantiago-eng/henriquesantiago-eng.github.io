@@ -710,15 +710,7 @@ body {
         height: 220px;
     }
 
-    .tl-track::before {
-        display: none;
-        /* hide center line on mobile */
-    }
 
-    .tl-scene-dot {
-        display: none;
-        /* hide dot on mobile */
-    }
 
     .letter-paper {
         padding: 36px 24px 30px;
