@@ -35,7 +35,7 @@ const TIMELINE_DATA = [
         date: "Out 2023",
         photo: "fotos/01.jpg",
         title: "Roller Jam",
-        text: "Onde tudo começou. Mal eu sabia onde ia chegar."
+        text: "Onde tudo começou. Mal sabiamos onde ia chegar."
     },
     // 2
     {
@@ -56,13 +56,13 @@ const TIMELINE_DATA = [
         date: "Abr 2024",
         photo: "fotos/04.JPEG",
         title: "Seu aniversário de 20 anos",
-        text: "Me lembro perfeitamente da usa vó me olhando e zoando você, como se ela já soubesse o que estaria por vir."
+        text: "Me lembro perfeitamente da sua vó me olhando e zoando você, como se ela já soubesse o que estaria por vir."
     },
     // 5
     {
         date: "Abr 2024",
         photo: "fotos/05.JPEG",
-        title: "Hope Jump",
+        title: "Rope Jump",
         text: "Esse dia foram tantas coisas. Foi a primeira vez que dormimos juntos. Acordamos cedo e fomos pular da ponte juntos (fofo e incrível). Me lembro do seu gritinho caindo no hope e eu tentando pedalar no ar kkkkk."
     },
     // 6
@@ -91,14 +91,14 @@ const TIMELINE_DATA = [
         date: "Jun 2025",
         photo: "fotos/09.jpg",
         title: "Show do Alok",
-        text: "E la vamos nós para mais um show kkkkk. Você sabe que não sou dos mais fãs, mas com você qualuqer lugar é divertido, qualquer memória é marcante. Você estava linda, como sempre."
+        text: "E lá vamos nós para mais um show kkkkk. Você sabe que não sou dos mais fãs, mas com você qualquer lugar é divertido, qualquer memória é marcante. Você estava linda, como sempre."
     },
     // 10
     {
         date: "Set 2025",
         photo: "fotos/10.JPEG",
         title: "Lençóis Maranhenses",
-        text: "Uma viagem maravilhosa. Vive momentos incríveis com você lá. Peço desculpas por ter causado memórias ruins em uma viagem tão incrível."
+        text: "Uma viagem maravilhosa. Vivi momentos incríveis com você lá. Peço desculpas por ter causado memórias ruins em uma viagem tão incrível."
     },
     // 11
     {
@@ -112,14 +112,14 @@ const TIMELINE_DATA = [
         date: "Dez 2025",
         photo: "fotos/12.JPEG",
         title: "Comida japonesa em casa juntos",
-        text: "Quando a gente deciciu do nada que irimaos fazer comida japonesa em casa. Foi muito legal todo mundo em conjunto e se esforçando para fazer dar certo. No final nós arrasamos"
+        text: "Quando a gente deciciu do nada que irimaos fazer comida japonesa em casa. Foi muito legal todo mundo em conjunto se esforçando para fazer dar certo. No final nós arrasamos"
     },
     // 13
     {
         date: "Jan 2026",
         photo: "fotos/13.JPEG",
         title: "Viagem com a trupe Praia Grande",
-        text: "Uma viagem para sairmos da rotina. Do nada decidimos e fizemos dar certo, mesmo que com os perregues e imporvisos necessários foi muito divertido. História para contar, e memórias para guardar."
+        text: "Uma viagem para sairmos da rotina. Do nada decidimos e fizemos dar certo, mesmo que com os perregues e improvisos necessários foi muito divertido. História para contar, e memórias para guardar."
     },
     // 14
     {
@@ -133,7 +133,7 @@ const TIMELINE_DATA = [
         date: "Fev 2026",
         placeholder: "Next Step",
         title: "1 Mês",
-        text: "Nosso primeiro mês juntos. Esse é só o primeiro capítulo de muitos por vir."
+        text: "Nosso primeiro mês juntos. Esse é só o primeiro capítulo de muitos que estão por vir."
     },
 ];
 
