@@ -292,11 +292,17 @@ function loadTrack(index) {
     bgMusic.load();
 }
 
-// Quando uma música termina, toca a próxima (loop infinito)
+// Quando uma música termina, toca a próxima (ou para no fim)
 bgMusic.addEventListener('ended', () => {
-    currentTrack = (currentTrack + 1) % PLAYLIST.length;
-    loadTrack(currentTrack);
-    bgMusic.play();
+    if (currentTrack + 1 < PLAYLIST.length) {
+        currentTrack++;
+        loadTrack(currentTrack);
+        bgMusic.play();
+    } else {
+        // Playlist acabou — para a música
+        musicPlaying = false;
+        musicToggle.classList.remove('is-playing');
+    }
 });
 
 // Inicia a música e atualiza o visual do botão

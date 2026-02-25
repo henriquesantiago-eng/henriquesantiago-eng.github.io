@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ── Reset ── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #070b18;
+            --surface: #0d1428;
+            --accent: #8eaadc;
+            --accent-dim: rgba(142, 170, 220, 0.25);
+            --cream: #e4e9f2;
+            --cream-dim: rgba(228, 233, 242, 0.55);
+            --ff-display: 'Playfair Display', Georgia, serif;
+            --ff-body: 'Inter', -apple-system, sans-serif;
+            --ff-letter: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            font-family: var(--ff-body);
+            color: var(--cream);
+            padding: 40px 20px;
+        }
+
+        /* ── Cartão ── */
+        .card {
+            width: 380px;
+            background:
+                repeating-linear-gradient(180deg, transparent, transparent 31px, rgba(142, 170, 220, 0.04) 31px, rgba(142, 170, 220, 0.04) 32px),
+                linear-gradient(135deg, #0d1428, #070b18);
+            border: 1px solid var(--accent-dim);
+            border-radius: 12px;
+            padding: 48px 36px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(142, 170, 220, 0.06);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Brilho sutil no topo */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(142, 170, 220, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* ── Estrelinhas decorativas ── */
+        .stars {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: twinkle 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 0.7;
+                transform: scale(1.2);
+            }
+        }
+
+        /* ── Título ── */
+        .card-title {
+            font-family: var(--ff-display);
+            font-style: italic;
+            font-size: 1.6rem;
+            color: var(--accent);
+            margin-bottom: 32px;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        /* ── Linha decorativa ── */
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+            margin: 0 auto 28px;
+        }
+
+        /* ── De / Para ── */
+        .fields {
+            text-align: left;
+            margin-bottom: 36px;
+            position: relative;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        .field-label {
+            font-family: var(--ff-display);
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .field-line {
+            width: 100%;
+            height: 1px;
+            background: var(--accent-dim);
+            margin-top: 24px;
+        }
+
+        /* ── Espaço QR Code ── */
+        .qr-section {
+            position: relative;
+            margin-top: 8px;
+        }
+
+        .qr-label {
+            font-family: var(--ff-display);
+            font-style: italic;
+            font-size: 0.8rem;
+            color: var(--cream-dim);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .qr-placeholder {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            border: 1px dashed var(--accent-dim);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(7, 11, 24, 0.5);
+        }
+
+        .qr-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .qr-placeholder span {
+            font-family: var(--ff-display);
+            font-style: italic;
+            font-size: 0.75rem;
+            color: var(--cream-dim);
+        }
+
+        /* ── Mensagem final ── */
+        .card-footer {
+            margin-top: 28px;
+            font-family: var(--ff-letter);
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--cream-dim);
+            letter-spacing: 1px;
+        }
+
+        /* ── Print-friendly ── */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .card {
+                box-shadow: none;
+                border-color: #ccc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <!-- Estrelinhas -->
+        <div class="stars" id="stars"></div>
+
+        <h1 class="card-title">Nossa História</h1>
+        <div class="divider"></div>
+
+        <div class="fields">
+            <div class="field">
+                <p class="field-label">De:</p>
+                <div class="field-line"></div>
+            </div>
+            <div class="field">
+                <p class="field-label">Para:</p>
+                <div class="field-line"></div>
+            </div>
+        </div>
+
+        <!-- QR Code — substitua o <span> por uma <img src="qrcode.png"> -->
+        <div class="qr-section">
+            <p class="qr-label">Escaneie para ver</p>
+            <div class="qr-placeholder">
+                <!-- Troque essa linha pela imagem do QR code: -->
+                <!-- <img src="qrcode.png" alt="QR Code"> -->
+                <span>QR Code</span>
+            </div>
+        </div>
+
+        <p class="card-footer">feito com amor</p>
+    </div>
+
+    <script>
+        // Gera estrelinhas aleatórias no card
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 20; i++) {
+            const s = document.createElement('div');
+            s.classList.add('star');
+            s.style.left = Math.random() * 100 + '%';
+            s.style.top = Math.random() * 100 + '%';
+            s.style.animationDelay = (Math.random() * 3).toFixed(1) + 's';
+            s.style.animationDuration = (2 + Math.random() * 2).toFixed(1) + 's';
+            starsContainer.appendChild(s);
+        }
+    </script>
+
+</body>
+
+</html>
