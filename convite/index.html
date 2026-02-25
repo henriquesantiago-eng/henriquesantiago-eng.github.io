@@ -109,9 +109,18 @@
             font-style: italic;
             font-size: 1.6rem;
             color: var(--accent);
-            margin-bottom: 32px;
+            margin-bottom: 10px;
             position: relative;
             letter-spacing: 1px;
+        }
+
+        .card-subtitle {
+            font-family: var(--ff-letter);
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--cream-dim);
+            margin-bottom: 28px;
+            position: relative;
         }
 
         /* ── Linha decorativa ── */
@@ -141,6 +150,14 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 6px;
+        }
+
+        .field-name {
+            font-family: var(--ff-letter);
+            font-size: 1.6rem;
+            color: var(--cream);
+            text-transform: none;
+            letter-spacing: 0;
         }
 
         .field-line {
@@ -223,15 +240,16 @@
         <div class="stars" id="stars"></div>
 
         <h1 class="card-title">Nossa História</h1>
+        <p class="card-subtitle">Feliz primeiro mês, gatinha</p>
         <div class="divider"></div>
 
         <div class="fields">
             <div class="field">
-                <p class="field-label">De:</p>
+                <p class="field-label">De: <span class="field-name">Kike</span></p>
                 <div class="field-line"></div>
             </div>
             <div class="field">
-                <p class="field-label">Para:</p>
+                <p class="field-label">Para: <span class="field-name">Lu</span></p>
                 <div class="field-line"></div>
             </div>
         </div>
@@ -241,8 +259,7 @@
             <p class="qr-label">Escaneie para ver</p>
             <div class="qr-placeholder">
                 <!-- Troque essa linha pela imagem do QR code: -->
-                <!-- <img src="qrcode.png" alt="QR Code"> -->
-                <span>QR Code</span>
+                <img src="qrcode.png" alt="QR Code">
             </div>
         </div>
 
