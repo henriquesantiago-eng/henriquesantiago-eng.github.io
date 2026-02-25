@@ -96,35 +96,35 @@ const TIMELINE_DATA = [
     // 10
     {
         date: "Set 2025",
-        photo: "fotos/10.jpg",
+        photo: "fotos/10.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 11
     {
         date: "Out 2025",
-        photo: "fotos/11.jpg",
+        photo: "fotos/11.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 12
     {
         date: "Dez 2025",
-        photo: "fotos/12.jpg",
+        photo: "fotos/12.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 13
     {
         date: "Jan 2026",
-        photo: "fotos/13.jpg",
+        photo: "fotos/13.JPEG",
         title: "Título do momento",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 14
     {
         date: "Jan 2026",
-        photo: "fotos/14.jpg",
+        photo: "fotos/14.JPEG",
         title: "O pedido",
         text: "Finalmente oficializamos o que o coração já sabia há tempos."
     },
