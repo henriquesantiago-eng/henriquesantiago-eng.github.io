@@ -162,60 +162,55 @@ setInterval(tickCounter, 1000);
 
 
 // ============================================================
-// ❸ GERAR TIMELINE VERTICAL
+// ❸ GERAR TIMELINE — Cenas imersivas full-screen
 // ============================================================
 const tlTrack = document.getElementById('tlTrack');
+const totalItems = TIMELINE_DATA.length;
 
 TIMELINE_DATA.forEach((item, i) => {
-    const el = document.createElement('div');
-    el.classList.add('tl-item');
-    el.innerHTML = `
-        <div class="tl-item-dot"></div>
-        <div class="tl-item-header">
-            <span class="tl-item-date">${item.date}</span>
-            <span class="tl-item-title">${item.title}</span>
-            <span class="tl-item-arrow">▸</span>
-        </div>
-        <div class="tl-item-content">
-            <img class="tl-item-photo" src="${item.photo}" alt="${item.title}" loading="lazy">
-            <p class="tl-item-text">${item.text}</p>
+    const scene = document.createElement('div');
+    scene.classList.add('tl-scene');
+    scene.innerHTML = `
+        <div class="tl-scene-dot"></div>
+        <div class="tl-scene-card">
+            <span class="tl-scene-date">${item.date}</span>
+            <img class="tl-scene-photo" src="${item.photo}" alt="${item.title}" loading="lazy">
+            <h3 class="tl-scene-title">${item.title}</h3>
+            <p class="tl-scene-text">${item.text}</p>
+            <p class="tl-scene-counter">${String(i + 1).padStart(2, '0')} / ${String(totalItems).padStart(2, '0')}</p>
         </div>
     `;
-
-    // Click header or dot to toggle open/close
-    const header = el.querySelector('.tl-item-header');
-    const dot = el.querySelector('.tl-item-dot');
-
-    function toggle() {
-        // Close others
-        document.querySelectorAll('.tl-item.is-open').forEach(other => {
-            if (other !== el) other.classList.remove('is-open');
-        });
-        el.classList.toggle('is-open');
-    }
-
-    header.addEventListener('click', toggle);
-    dot.addEventListener('click', toggle);
-
-    tlTrack.appendChild(el);
+    tlTrack.appendChild(scene);
 });
 
 
 // ============================================================
-// ❹ INTERSECTION OBSERVER — Reveal items as they scroll in
+// ❹ INTERSECTION OBSERVER — Ativa cenas quando visíveis
 // ============================================================
-const allRevealables = document.querySelectorAll('.reveal, .tl-item');
 
-const observer = new IntersectionObserver((entries) => {
+// Observer para reveal de elementos genéricos (hero text, etc)
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) {
             e.target.classList.add('is-visible');
-            observer.unobserve(e.target);
+            revealObserver.unobserve(e.target);
         }
     });
 }, { threshold: 0.12 });
 
-allRevealables.forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Observer para cenas da timeline — toggle ativo/inativo
+const sceneObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        e.target.classList.toggle('is-active', e.isIntersecting);
+    });
+}, {
+    threshold: 0.4,
+    rootMargin: '-10% 0px -10% 0px'
+});
+
+document.querySelectorAll('.tl-scene').forEach(el => sceneObserver.observe(el));
 
 
 // ============================================================
@@ -235,7 +230,6 @@ function heroParallax() {
 
 window.addEventListener('scroll', () => {
     heroParallax();
-    checkLetterReveal();
 }, { passive: true });
 
 
@@ -348,4 +342,3 @@ for (let i = 0; i < 8; i++) setTimeout(spawnParticle, i * 300);
 
 // Initial calls
 heroParallax();
-checkLetterReveal();
