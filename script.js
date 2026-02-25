@@ -35,105 +35,105 @@ const TIMELINE_DATA = [
         date: "Out 2023",
         photo: "fotos/01.jpg",
         title: "Roller Jam",
-        text: "Onde tudo começou"
+        text: "Onde tudo começou. Mal eu sabia onde ia chegar."
     },
     // 2
     {
         date: "Nov 2023",
         photo: "fotos/02.JPEG",
         title: "Primeira piscininha juntos",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        text: "Aqui eu já estava apaixonado e queria passar todo o meu tempo com você."
     },
     // 3
     {
         date: "Mar 2024",
         photo: "fotos/03.JPEG",
         title: "Hopi Hari",
-        text: "lembro como vc estava linda esse dia."
+        text: "Esse dia foi incrível, nos divertimos muito o dia inteiro. Lembro como se fosse hoje o quão linda você estava."
     },
     // 4
     {
         date: "Abr 2024",
         photo: "fotos/04.JPEG",
         title: "Seu aniversário de 20 anos",
-        text: "lembrar da vó dela"
+        text: "Me lembro perfeitamente da usa vó me olhando e zoando você, como se ela já soubesse o que estaria por vir."
     },
     // 5
     {
         date: "Abr 2024",
         photo: "fotos/05.JPEG",
         title: "Hope Jump",
-        text: "dormir juntos primeira vez, gritinho, eu pedalando"
+        text: "Esse dia foram tantas coisas. Foi a primeira vez que dormimos juntos. Acordamos cedo e fomos pular da ponte juntos (fofo e incrível). Me lembro do seu gritinho caindo no hope e eu tentando pedalar no ar kkkkk."
     },
     // 6
     {
         date: "Jul 2024",
         photo: "fotos/06.JPEG",
         title: "Beto Carrero",
-        text: "nossa primeira viagem juntos"
+        text: "Nossa primeira viagem juntos. Gostamos tanto do Hopi Hari que fomos para o Beto Carrero. Foi bem divertido. Aproveitamos um monte o parque."
     },
     // 7
     {
         date: "Jul 2024",
         photo: "fotos/07.JPEG",
         title: "Balneário Camboriú",
-        text: "gosto dessa foto"
+        text: "Teve seus altos e baixos, mas tivemos momentos muito bons juntos nessa viagem. Eu amo essa foto nossa, apesar de eu estar horrorosso."
     },
     // 8
     {
         date: "Jan 2025",
         photo: "fotos/08.JPEG",
         title: "Show do Twenty One Pilots",
-        text: "Unica foto que achei"
+        text: "Nosso segundo show juntos. Foi muito bom viver essa experiência ao seu lado."
     },
     // 9
     {
         date: "Jun 2025",
         photo: "fotos/09.jpg",
         title: "Show do Alok",
-        text: "Linda"
+        text: "E la vamos nós para mais um show kkkkk. Você sabe que não sou dos mais fãs, mas com você qualuqer lugar é divertido, qualquer memória é marcante. Você estava linda, como sempre."
     },
     // 10
     {
         date: "Set 2025",
         photo: "fotos/10.JPEG",
         title: "Lençóis Maranhenses",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        text: "Uma viagem maravilhosa. Vive momentos incríveis com você lá. Peço desculpas por ter causado memórias ruins em uma viagem tão incrível."
     },
     // 11
     {
         date: "Out 2025",
         photo: "fotos/11.JPEG",
-        title: "Nós comendo um dia antes do restaurante desabar",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Quase menina!",
+        text: "Essa foi a minha melhor tentativa para te desviver. Foi por um diazinho... Brincadeiras de lado, a comida estava muito boa!"
     },
     // 12
     {
         date: "Dez 2025",
         photo: "fotos/12.JPEG",
-        title: "Fazendo comida japonesa em casa juntos",
-        text: "Arrasamos"
+        title: "Comida japonesa em casa juntos",
+        text: "Quando a gente deciciu do nada que irimaos fazer comida japonesa em casa. Foi muito legal todo mundo em conjunto e se esforçando para fazer dar certo. No final nós arrasamos"
     },
     // 13
     {
         date: "Jan 2026",
         photo: "fotos/13.JPEG",
         title: "Viagem com a trupe Praia Grande",
-        text: "Muito bom passar com voce"
+        text: "Uma viagem para sairmos da rotina. Do nada decidimos e fizemos dar certo, mesmo que com os perregues e imporvisos necessários foi muito divertido. História para contar, e memórias para guardar."
     },
     // 14
     {
         date: "Jan 2026",
         photo: "fotos/14.JPEG",
         title: "O pedido",
-        text: "Finalmente oficializamos o que o coração já sabia há tempos."
+        text: "O grande dia, finalmente oficializamos o que o coração já sabia há tempos. Sempre foi você."
     },
     // 15
     {
         date: "Fev 2026",
         placeholder: "Next Step",
         title: "1 Mês",
-        text: "E esse é só o primeiro capítulo de muitos por vir."
+        text: "Nosso primeiro mês juntos. Esse é só o primeiro capítulo de muitos por vir."
     },
 ];
 
