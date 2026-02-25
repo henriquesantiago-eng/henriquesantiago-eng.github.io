@@ -34,92 +34,92 @@ const TIMELINE_DATA = [
     {
         date: "Out 2023",
         photo: "fotos/01.jpg",
-        title: "O começo do recomeço",
-        text: "Aquele café que mudou tudo. Eu já sabia que tinha algo especial."
+        title: "Roller Jam",
+        text: "Onde tudo começou"
     },
     // 2
     {
         date: "Nov 2023",
         photo: "fotos/02.JPEG",
-        title: "Título do momento",
+        title: "Primeira piscininha juntos",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 3
     {
         date: "Mar 2024",
         photo: "fotos/03.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Hopi Hari",
+        text: "lembro como vc estava linda esse dia."
     },
     // 4
     {
         date: "Abr 2024",
         photo: "fotos/04.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Seu aniversário de 20 anos",
+        text: "lembrar da vó dela"
     },
     // 5
     {
         date: "Abr 2024",
         photo: "fotos/05.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Hope Jump",
+        text: "dormir juntos primeira vez, gritinho, eu pedalando"
     },
     // 6
     {
         date: "Jul 2024",
         photo: "fotos/06.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Beto Carrero",
+        text: "nossa primeira viagem juntos"
     },
     // 7
     {
         date: "Jul 2024",
         photo: "fotos/07.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Balneário Camboriú",
+        text: "gosto dessa foto"
     },
     // 8
     {
         date: "Jan 2025",
         photo: "fotos/08.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Show do Twenty One Pilots",
+        text: "Unica foto que achei"
     },
     // 9
     {
         date: "Jun 2025",
         photo: "fotos/09.jpg",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Show do Alok",
+        text: "Linda"
     },
     // 10
     {
         date: "Set 2025",
         photo: "fotos/10.JPEG",
-        title: "Título do momento",
+        title: "Lençóis Maranhenses",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 11
     {
         date: "Out 2025",
         photo: "fotos/11.JPEG",
-        title: "Título do momento",
+        title: "Nós comendo um dia antes do restaurante desabar",
         text: "Descrição ou mensagem curta sobre esse momento."
     },
     // 12
     {
         date: "Dez 2025",
         photo: "fotos/12.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Fazendo comida japonesa em casa juntos",
+        text: "Arrasamos"
     },
     // 13
     {
         date: "Jan 2026",
         photo: "fotos/13.JPEG",
-        title: "Título do momento",
-        text: "Descrição ou mensagem curta sobre esse momento."
+        title: "Viagem com a trupe Praia Grande",
+        text: "Muito bom passar com voce"
     },
     // 14
     {
@@ -131,7 +131,7 @@ const TIMELINE_DATA = [
     // 15
     {
         date: "Fev 2026",
-        photo: "fotos/15.jpg",
+        placeholder: "Next Step",
         title: "1 Mês",
         text: "E esse é só o primeiro capítulo de muitos por vir."
     },
@@ -187,13 +187,18 @@ TIMELINE_DATA.forEach((item, i) => {
         lastYear = year;
     }
 
+    // Se tem placeholder em vez de foto, mostra texto grande
+    const photoHTML = item.placeholder
+        ? `<div class="tl-scene-placeholder"><span>${item.placeholder}</span></div>`
+        : `<img class="tl-scene-photo" src="${item.photo}" alt="${item.title}" loading="lazy">`;
+
     const scene = document.createElement('div');
     scene.classList.add('tl-scene');
     scene.innerHTML = `
         <div class="tl-scene-dot"></div>
         <div class="tl-scene-card">
             <span class="tl-scene-date">${item.date}</span>
-            <img class="tl-scene-photo" src="${item.photo}" alt="${item.title}" loading="lazy">
+            ${photoHTML}
             <h3 class="tl-scene-title">${item.title}</h3>
             <p class="tl-scene-text">${item.text}</p>
             <p class="tl-scene-counter">${String(i + 1).padStart(2, '0')} / ${String(totalItems).padStart(2, '0')}</p>
